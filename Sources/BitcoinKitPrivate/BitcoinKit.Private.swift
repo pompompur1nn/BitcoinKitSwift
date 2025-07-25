@@ -225,7 +225,7 @@ public class _HDKey {
             BN_mod_add(privateKeyNum, privateKeyNum, factor, curveOrder, ctx)
             
             // Check for invalid derivation.
-            if BN_is_zero(x) != 0{
+            if BN_is_zero(privateKeyNum) != 0{
                 return nil
             }
             let numBytes = ((BN_num_bits(privateKeyNum)+7)/8) // BN_num_bytes
